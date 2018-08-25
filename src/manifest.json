@@ -1,0 +1,14 @@
+{
+  "name": "JobGreen",
+  "short_name": "JobGreen",
+  "start_url": "./?utm_source=web_app_manifest",
+	"orientation": "portrait",
+	"display": "fullscreen",
+  "icons": [{
+    "src": "assets/img/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#2ca794",
+  "theme_color": "#2ca794"
+}

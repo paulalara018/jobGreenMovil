@@ -1,0 +1,30 @@
+<!-- Generated template for the CapturaImagenComponent component -->
+<ion-header></ion-header>
+<ion-content padding>
+<ion-card>
+    <ion-card-content>
+        <button ion-button color="danger" icon-right block (click)="takePicture();">
+          Tomar Foto
+          <ion-icon name="camera"></ion-icon>
+        </button>
+        <img [src]="base64Image">
+      </ion-card-content>
+    <form>
+        <ion-list>     
+          <ion-item>
+            <ion-label floating>UBICACIÓN</ion-label>
+            <ion-input type="text" name="ubicacion" clearInput="true"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+              <ion-label floating>COMENTARIO</ion-label>
+              <ion-input type="text" name="comentario" clearInput="true"></ion-input>
+          </ion-item>  
+        </ion-list>
+  
+        <button type="submit" ion-button color="green" icon-right block>
+          <ion-icon name="send"></ion-icon>ENVIAR
+        </button>
+      </form>
+</ion-card>
+</ion-content>

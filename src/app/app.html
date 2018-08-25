@@ -1,0 +1,71 @@
+<ion-split-pane when="lg">
+	<ion-menu side="left" id="authenticated" [content]="content" class="menu-bg">
+	  <ion-header>
+	    <ion-toolbar class="user-profile profiles-bg">
+	      <div class="user-profile">
+	        <ion-list no-margin>
+	          <ion-item>
+	            <ion-avatar item-left>
+	              <img src="assets/img/logo.png">
+							</ion-avatar>
+	            <h2 ion-text class="text-white fw700 text-15x">Paula Lara</h2>
+							<p ion-text color="light">Ingeniera Electrónica</p>
+	          </ion-item>
+					</ion-list>
+
+		      <ion-grid no-padding>
+		        <ion-row class="other-data">
+		          <ion-col text-center class="column">
+			          <button ion-button icon-start small full menuClose no-margin color="dark" (click)="openPage(accountMenuItems[1])">
+			            <ion-icon name="contact"></ion-icon>
+			            Mi cuenta
+			          </button>
+		          </ion-col>
+		          <ion-col text-center class="column">
+			          <button ion-button icon-start small full menuClose no-margin color="dark" (click)="openPage(accountMenuItems[0])">
+			            <ion-icon name="log-out"></ion-icon>
+			            Salir
+			          </button>
+		          </ion-col>
+		        </ion-row>
+		      </ion-grid>
+	      </div>
+	    </ion-toolbar>
+	  </ion-header>	
+
+	  <ion-content>			
+	    <ion-list>
+					<ion-list-header no-margin>
+							<span ion-text color="dark" class="fw500">Inicio</span>
+						</ion-list-header>
+	      <button menuClose ion-item *ngFor="let menuItem of appMenuItems" (click)="openPage(menuItem)">
+	        <ion-icon item-left [name]="menuItem.icon"></ion-icon>
+	        {{menuItem.title}}
+	      </button>
+			</ion-list>
+			
+	    <ion-list>
+					<ion-list-header no-margin>
+							<span ion-text color="dark" class="fw500">Configuración</span>
+					</ion-list-header>
+			
+					<button menuClose ion-item *ngFor="let menuItem of configurationMenuItems" (click)="openPage(menuItem)">
+							<ion-icon item-left [name]="menuItem.icon"></ion-icon>
+							{{menuItem.title}}
+						</button>		
+			</ion-list>
+
+	    <ion-list>
+	      <ion-list-header no-margin>
+	        <span ion-text color="dark" class="fw500">Ayuda</span>
+	      </ion-list-header>
+				<button menuClose ion-item *ngFor="let menuItem of helpMenuItems" 
+				(click)="openPage(menuItem)">
+	        <ion-icon item-left [name]="menuItem.icon"></ion-icon>
+	        {{menuItem.title}}
+	      </button>
+			</ion-list>
+	  </ion-content>
+	</ion-menu>
+	<ion-nav [root]="rootPage" main #content swipeBackEnabled="false"></ion-nav>
+</ion-split-pane>

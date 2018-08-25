@@ -1,0 +1,11 @@
+{
+  "name": "jobGreenPhone",
+  "integrations": {
+  "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies":[{
+    "path":"/jobGreen",
+    "proxyUrl": "http://localhost:8080/jobGreen"
+  }]
+}

@@ -1,0 +1,95 @@
+<!--
+  Generated template for the DenuniaCrearPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- Generated template for the CapturaImagenComponent component -->
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Reportar 
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-card>
+      <ion-card-header>
+        Tutorial Camera
+      </ion-card-header>
+      <ion-card-content>
+        <button ion-button color="danger" icon-right block (click)="takePicture();">
+          Tomar Foto
+          <ion-icon name="camera"></ion-icon>
+        </button>
+        
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Comentario</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label floating>Ubicación</ion-label>
+            <ion-input type="gprs"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <img [src]="base64Image">
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+
+<!--
+<ion-content padding>
+    <ion-card>
+      <ion-card-header>
+        Tutorial Camera
+      </ion-card-header>
+      <ion-card-content>
+        <button ion-button color="danger" icon-right block (click)="takePicture();">
+          Tomar Foto
+          <ion-icon name="camera"></ion-icon>
+        </button>
+        <img [src]="base64Image">
+      </ion-card-content>
+    </ion-card>
+  </ion-content>-->
+
+<!--<ion-header></ion-header>
+<ion-content padding>
+<ion-card>
+    <ion-card-content>
+        <button ion-button color="danger" icon-right block (click)="takePicture();">
+          Tomar Foto
+          <ion-icon name="camera"></ion-icon>
+        </button>
+        <img [src]="base64Image">
+      </ion-card-content>
+    <form>
+        <ion-list>     
+          <ion-item>
+            <ion-label floating>UBICACIÓN</ion-label>
+            <ion-input type="text" name="ubicacion" clearInput="true"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+              <ion-label floating>COMENTARIO</ion-label>
+              <ion-input type="text" name="comentario" clearInput="true"></ion-input>
+          </ion-item>  
+        </ion-list>
+  
+        <button type="submit" ion-button color="green" icon-right block>
+          <ion-icon name="send"></ion-icon>ENVIAR
+        </button>
+      </form>
+</ion-card>
+</ion-content>-->
+
+<!--
+<ion-header>
+  <ion-navbar>
+    <ion-title>denuncia-crear</ion-title>
+  </ion-navbar>
+</ion-header>
+<captura-imagen></captura-imagen>-->

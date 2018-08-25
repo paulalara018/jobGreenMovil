@@ -1,0 +1,72 @@
+
+<ion-tabs>
+      <ion-tab tabIcon="leaf" tabTitle="Reciclar" [root]="tab1"></ion-tab>
+      <ion-tab tabIcon="eye" tabTitle="Reportar" [root]="tab2"></ion-tab>
+      <ion-tab tabIcon="compass" tabTitle="Puntos" [root]="tab3"></ion-tab>
+      <ion-tab tabIcon="trending-up" tabTitle="Regalos" [root]="tab4"></ion-tab>
+</ion-tabs>
+    
+<!--
+  <ion-content class="lightest-bg">
+    <ion-grid no-padding>
+      <ion-row *ngIf="viewMode === 'list'">
+      <ion-col col col-12 col-md-6 *ngFor="let property of properties | 
+        termSearch:proptype:'label'" >
+          <ion-card margin-bottom no-padding>
+            <div class="card-img-wrap">
+              <ion-fab bottom right edge>
+                <button ion-fab mini (click)="favorite(property)">
+                  <ion-icon name="heart"></ion-icon>
+                </button>
+              </ion-fab>
+              <img src="{{property.thumbnail}}" tappable (click)="openPropertyDetail(property)">
+              <span ion-text class="card-img-price fw700 text-black">
+                <ion-icon ios="ios-pricetag-outline" md="md-pricetag" color="primary"></ion-icon>
+                {{ property.price }}
+                <sup ion-text color="dark" class="fw500" *ngIf="property.period === 'week'">/week</sup>
+                <sup ion-text color="dark" class="fw500" *ngIf="property.period === 'month'">/month</sup>
+              </span>
+              <span ion-text class="card-img-status sale fw300 text-white" [ngClass]="{'rent': property.label === 'rent', 'sale': property.label === 'sale'}">
+                {{ property.label }}
+              </span>
+            </div>
+            <ion-card-content>
+              <ion-card-title ion-text color="dark" tappable (click)="openPropertyDetail(property)" no-margin no-padding>
+                {{property.title}}
+              </ion-card-title>
+              <p ion-text color="primary" no-margin>
+                {{property.city}}, {{property.state}}
+              </p>
+        <hr margin-vertical>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+  </ion-row>
+      <div *ngIf="viewMode === 'map'">
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="12">
+          <agm-marker *ngFor="let property of properties | termSearch:proptype:'label'; let i = index" [latitude]="property.lat" [longitude]="property.long">
+            <agm-info-window>
+              <img src="{{property.thumbnail}}" class="mw240" tappable (click)="openPropertyDetail(property)">
+              <h3 tappable (click)="openPropertyDetail(property)">
+                <strong>{{property.title}}</strong>
+              </h3>
+              <p>{{ property.price }} - <strong>{{ property.label }}</strong></p>
+            </agm-info-window>
+          </agm-marker>
+        </agm-map>
+      </div>
+    </ion-grid>
+  </ion-content>
+  -->
+  <!--
+  <ion-footer padding>
+      <ion-segment [(ngModel)]="viewMode">
+          <ion-segment-button value="list">
+              <ion-icon name="leaf"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="map">
+              <ion-icon name="map"></ion-icon>
+          </ion-segment-button>
+      </ion-segment>
+  </ion-footer>
+  -->
